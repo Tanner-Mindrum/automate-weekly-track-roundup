@@ -146,9 +146,9 @@ def main():
         count += 1
 
     ''' Create a "best"/"meh"/"worst" tracks of the week playlist on Youtube '''
-    # best_playlist_id = create_best_playlist(youtube, date)
-    # meh_playlist_id = create_meh_playlist(youtube, date)
-    # worst_playlist_id = create_worst_playlist(youtube, date)
+    best_playlist_id = create_best_playlist(youtube, date)
+    meh_playlist_id = create_meh_playlist(youtube, date)
+    worst_playlist_id = create_worst_playlist(youtube, date)
 
     ''' Create a "best"/"meh"/"worst" tracks of the week playlist on Spotify '''
     playlist_ids = create_spotify_playlists(spotify_user_id, spotify_token, date)
@@ -174,12 +174,12 @@ def main():
                 )
                 request.execute()
 
-                # if id_enum == 1:
-                #     add_to_youtube_playlist(youtube, best_playlist_id, extracted_id)
-                # elif id_enum == 2:
-                #     add_to_youtube_playlist(youtube, meh_playlist_id, extracted_id)
-                # elif id_enum == 3:
-                #     add_to_youtube_playlist(youtube, worst_playlist_id, extracted_id)
+                if id_enum == 1:
+                    add_to_youtube_playlist(youtube, best_playlist_id, extracted_id)
+                elif id_enum == 2:
+                    add_to_youtube_playlist(youtube, meh_playlist_id, extracted_id)
+                elif id_enum == 3:
+                    add_to_youtube_playlist(youtube, worst_playlist_id, extracted_id)
 
         except ValueError:
             if " - " in line.lower():
