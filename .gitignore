@@ -18,3 +18,7 @@ tester.py
 # pycharm files
 *.iml
 *.xml
+
+# pickle files
+*.pickle
+token.pickle
