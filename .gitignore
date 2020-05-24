@@ -14,3 +14,7 @@ secrets.py
 # Extra python files
 quickstart.py
 tester.py
+
+# pycharm files
+*.iml
+*.xml
