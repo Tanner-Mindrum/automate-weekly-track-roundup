@@ -1,1 +1,16 @@
+# Text files
+*.txt
+notes.txt
 
+# JSON files
+*.json
+
+# CACHE file
+.cache-TannerMindrum
+
+# Secrets
+secrets.py
+
+# Extra python files
+quickstart.py
+tester.py
